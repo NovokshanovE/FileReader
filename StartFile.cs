@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace FileReader
 {
-    public partial class StartFile : Form
+    public partial class formStartSelect : Form
     {
-        public StartFile()
+        public formStartSelect()
         {
             InitializeComponent();
-        }
-
-        private void folderBrowserDialog1_HelpRequest(object sender, EventArgs e)
-        {
-
         }
 
         private void StartButtonToCreate_Click(object sender, EventArgs e)
@@ -28,6 +23,24 @@ namespace FileReader
         }
 
         private void StartButtonToOpen_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void StartDynamicFolder_Click(object sender, EventArgs e)
+        {
+            DialogResult result = folderBrowserDialog1.ShowDialog();
+            string folderName;
+            // если папка выбрана и нажата клавиша `OK` - значит можно получить путь к папке
+            if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(folderBrowserDialog1.SelectedPath))
+            {
+                // запишем в нашу переменную путь к папке
+                folderName = folderBrowserDialog1.SelectedPath;
+                StartFileName.Text = folderName;
+            }
+        }
+
+        private void folderBrowserDialog1_HelpRequest(object sender, EventArgs e)
         {
 
         }
