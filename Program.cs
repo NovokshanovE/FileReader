@@ -12,7 +12,12 @@ namespace FileReader
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new formStartSelect());
+            formStartSelect StartWindow = new formStartSelect();
+            Application.Run(StartWindow);
+            
+            FormFile formFile = new FormFile(StartWindow.StreamReader_Output(), StartWindow.FilePath_Output());
+            Application.Run(formFile);
+
         }
     }
 }

@@ -32,12 +32,12 @@
             buttonCreate = new Button();
             buttonOpen = new Button();
             StartGroupBox = new GroupBox();
-            StartFileName = new TextBox();
+            textBox_FilePath = new TextBox();
             GroupBox_FilePath = new GroupBox();
             StartDynamicFolder = new Button();
             folderBrowserDialog1 = new FolderBrowserDialog();
             groupBox_fileName = new GroupBox();
-            textBox1 = new TextBox();
+            textBox_FileName = new TextBox();
             StartGroupBox.SuspendLayout();
             GroupBox_FilePath.SuspendLayout();
             groupBox_fileName.SuspendLayout();
@@ -83,20 +83,20 @@
             StartGroupBox.TabStop = false;
             StartGroupBox.Text = "Выбор:";
             // 
-            // StartFileName
+            // textBox_FilePath
             // 
-            StartFileName.Dock = DockStyle.Left;
-            StartFileName.Location = new Point(3, 24);
-            StartFileName.Margin = new Padding(3, 4, 3, 4);
-            StartFileName.Multiline = true;
-            StartFileName.Name = "StartFileName";
-            StartFileName.Size = new Size(320, 58);
-            StartFileName.TabIndex = 3;
+            textBox_FilePath.Dock = DockStyle.Left;
+            textBox_FilePath.Location = new Point(3, 24);
+            textBox_FilePath.Margin = new Padding(3, 4, 3, 4);
+            textBox_FilePath.Multiline = true;
+            textBox_FilePath.Name = "textBox_FilePath";
+            textBox_FilePath.Size = new Size(320, 58);
+            textBox_FilePath.TabIndex = 3;
             // 
             // GroupBox_FilePath
             // 
             GroupBox_FilePath.Controls.Add(StartDynamicFolder);
-            GroupBox_FilePath.Controls.Add(StartFileName);
+            GroupBox_FilePath.Controls.Add(textBox_FilePath);
             GroupBox_FilePath.Dock = DockStyle.Top;
             GroupBox_FilePath.Location = new Point(0, 0);
             GroupBox_FilePath.Margin = new Padding(3, 4, 3, 4);
@@ -125,7 +125,7 @@
             // 
             // groupBox_fileName
             // 
-            groupBox_fileName.Controls.Add(textBox1);
+            groupBox_fileName.Controls.Add(textBox_FileName);
             groupBox_fileName.Dock = DockStyle.Fill;
             groupBox_fileName.Location = new Point(0, 86);
             groupBox_fileName.Name = "groupBox_fileName";
@@ -134,13 +134,13 @@
             groupBox_fileName.TabStop = false;
             groupBox_fileName.Text = "Название файла:";
             // 
-            // textBox1
+            // textBox_FileName
             // 
-            textBox1.Dock = DockStyle.Left;
-            textBox1.Location = new Point(3, 23);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(320, 27);
-            textBox1.TabIndex = 0;
+            textBox_FileName.Dock = DockStyle.Left;
+            textBox_FileName.Location = new Point(3, 23);
+            textBox_FileName.Name = "textBox_FileName";
+            textBox_FileName.Size = new Size(320, 27);
+            textBox_FileName.TabIndex = 0;
             // 
             // formStartSelect
             // 
@@ -168,11 +168,11 @@
         private System.Windows.Forms.Button buttonCreate;
         private System.Windows.Forms.Button buttonOpen;
         private System.Windows.Forms.GroupBox StartGroupBox;
-        private System.Windows.Forms.TextBox StartFileName;
+        private System.Windows.Forms.TextBox textBox_FilePath;
         private System.Windows.Forms.GroupBox GroupBox_FilePath;
         private FolderBrowserDialog folderBrowserDialog1;
         public Button StartDynamicFolder;
         private GroupBox groupBox_fileName;
-        private TextBox textBox1;
+        private TextBox textBox_FileName;
     }
 }
